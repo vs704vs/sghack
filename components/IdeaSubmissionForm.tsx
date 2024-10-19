@@ -99,7 +99,7 @@ const IdeaSubmissionForm: React.FC<IdeaSubmissionFormProps> = ({ categories, onS
         </button>
         <button
           type="submit"
-          className="px-6 py-3 border border-transparent shadow-sm text-sm font-medium rounded-lg text-white bg-stone-900 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-stone-900 transition-colors duration-200"
+          className="px-6 py-3 border border-transparent shadow-sm text-sm font-medium rounded-lg text-white bg-stone-900 hover:bg-stone-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-stone-900 transition-colors duration-200"
         >
           Submit Idea
         </button>

@@ -48,7 +48,7 @@ const CategoryManager: React.FC<CategoryManagerProps> = ({
           {!isAdding && (
             <button
               onClick={() => setIsAdding(true)}
-              className="px-4 py-2 bg-stone-900 text-white rounded-full hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-stone-900 focus:ring-offset-2 transition duration-300 ease-in-out transform hover:scale-105"
+              className="px-4 py-2 bg-stone-900 text-white rounded-full hover:bg-stone-700 focus:outline-none focus:ring-2 focus:ring-stone-900 focus:ring-offset-2 transition duration-300 ease-in-out transform hover:scale-105"
             >
               <PlusIcon className="h-5 w-5 inline-block mr-2" />
               Add Category
@@ -67,7 +67,7 @@ const CategoryManager: React.FC<CategoryManagerProps> = ({
               />
               <button
                 type="submit"
-                className="px-4 py-2 bg-stone-900 text-white rounded-r-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-stone-900 focus:ring-offset-2 transition duration-300 ease-in-out"
+                className="px-4 py-2 bg-stone-900 text-white rounded-r-lg hover:bg-stone-700 focus:outline-none focus:ring-2 focus:ring-stone-900 focus:ring-offset-2 transition duration-300 ease-in-out"
               >
                 <CheckIcon className="h-5 w-5" />
               </button>
@@ -93,7 +93,7 @@ const CategoryManager: React.FC<CategoryManagerProps> = ({
                   />
                   <button
                     type="submit"
-                    className="px-4 py-2 bg-stone-900 text-white rounded-r-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-stone-900 focus:ring-offset-2 transition duration-300 ease-in-out"
+                    className="px-4 py-2 bg-stone-900 text-white rounded-r-lg hover:bg-stone-700 focus:outline-none focus:ring-2 focus:ring-stone-900 focus:ring-offset-2 transition duration-300 ease-in-out"
                   >
                     <CheckIcon className="h-5 w-5" />
                   </button>

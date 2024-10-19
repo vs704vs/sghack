@@ -456,7 +456,7 @@ const Home: NextPage<HomeProps> = ({ initialIdeas, categories }) => {
                   <div className="mt-6">
                     <button
                       onClick={() => setShowSubmissionForm(true)}
-                      className="w-full inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-stone-900 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-stone-900 transition duration-150 ease-in-out"
+                      className="w-full inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-stone-900 hover:bg-stone-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-stone-900 transition duration-150 ease-in-out"
                     >
                       <PlusIcon className="h-5 w-5 mr-2" />
                       Submit New Idea

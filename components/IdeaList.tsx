@@ -150,7 +150,7 @@ const IdeaList: React.FC<IdeaListProps> = ({ ideas, onVote, onDelete, session, o
                 onClick={() => onVote(idea.id)}
                 className={`p-2 rounded-full transition duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-stone-900 ${
                   idea.votes?.some((vote) => vote.userId === parseInt(session.user.id as string))
-                    ? 'bg-stone-900 text-white hover:bg-indigo-700'
+                    ? 'bg-stone-900 text-white hover:bg-stone-700'
                     : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
                 }`}
               >
