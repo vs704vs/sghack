@@ -5,6 +5,7 @@ import { useSession, getSession } from "next-auth/react";
 import prisma from "../lib/prisma";
 import { Category } from "@prisma/client";
 import IdeaSubmissionForm from "../components/IdeaSubmissionForm";
+
 import {
   FunnelIcon,
   MagnifyingGlassIcon,
@@ -18,6 +19,7 @@ import {
 import Navigation from "../components/Navigation";
 import KanbanBoard from "../components/KanbanBoard";
 import { formatDate } from "date-fns";
+import GoogleTranslate from "../components/GoogleTranslate";
 
 interface Comment {
   id: number;
@@ -331,7 +333,8 @@ const Home: NextPage<HomeProps> = ({ initialIdeas, categories }) => {
       </Head>
 
       <Navigation />
-
+      
+      <GoogleTranslate />
       <main className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row gap-6">
           <div className="w-full lg:w-1/4">
@@ -580,6 +583,7 @@ const Home: NextPage<HomeProps> = ({ initialIdeas, categories }) => {
           </div>
         </div>
       </main>
+      
     </div>
   );
 };
