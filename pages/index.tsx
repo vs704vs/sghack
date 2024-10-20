@@ -502,7 +502,7 @@ const Home: NextPage<HomeProps> = ({ initialIdeas, categories }) => {
                       }`}
                     >
                       <Squares2X2Icon className="h-5 w-5 mr-1" />
-                      <span>Kanban</span>
+                      <span>Grid</span>
                     </button>
                     <button
                       onClick={() => setViewMode("list")}
