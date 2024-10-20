@@ -2,6 +2,86 @@
 @tailwind components;
 @tailwind utilities;
 
+/* styles/global.css or inline in a specific stylesheet */
+#google_translate_element {
+    display: inline-flex;
+  }
+  
+  .goog-te-banner-frame.skiptranslate,
+  .goog-te-gadget-icon,
+  .goog-te-menu-value span[style*="color:rgb(51, 51, 51)"] {
+    display: none !important;
+  }
+  
+  body {
+    /* top: 0px !important; Adjust body position if the translate banner causes it to shift */
+  }
+  
+  .goog-te-gadget {
+    /* color: transparent !important; */
+    font-size: 0;
+  }
+  
+  /* styles/global.css or inline in a specific stylesheet */
+#google_translate_element {
+    display: inline-flex;
+  }
+  
+  .goog-te-banner-frame.skiptranslate,
+  .goog-te-gadget-icon,
+  .goog-te-menu-value span[style*="color:rgb(51, 51, 51)"] {
+    display: none !important;
+  }
+  
+  body {
+    /* top: 0px !important; Adjust body position if the translate banner causes it to shift */
+  }
+  
+  .goog-te-gadget {
+    /* color: transparent !important; */
+    font-size: 0;
+  }
+  
+  #google_translate_element select {
+    display: inline-block;
+    font-size: 16px; /* Adjust as needed */
+    color: #333; 
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 4px;
+    margin: 10px 0; 
+  }/* styles/global.css or inline in a specific stylesheet */
+#google_translate_element {
+    display: inline-flex;
+  }
+  
+  .goog-te-banner-frame.skiptranslate,
+  .goog-te-gadget-icon,
+  .goog-te-menu-value span[style*="color:rgb(51, 51, 51)"] {
+    display: none !important;
+  }
+  
+  body {
+    /* top: 0px !important; Adjust body position if the translate banner causes it to shift */
+  }
+  
+  .goog-te-gadget {
+    /* color: transparent !important; */
+    font-size: 0;
+  }
+  
+  #google_translate_element select {
+    display: inline-block;
+    font-size: 16px; /* Adjust as needed */
+    color: #333; 
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 4px;
+    margin: 10px 0; 
+  }
+
   .VIpgJd-ZVi9od-ORHb-OEVmcd {
     visibility:hidden !important
   }
