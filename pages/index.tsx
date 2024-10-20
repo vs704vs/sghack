@@ -15,6 +15,7 @@ import {
   CalendarIcon,
   UserIcon,
   ClockIcon,
+  BuildingLibraryIcon,
 } from "@heroicons/react/24/outline";
 import Navigation from "../components/Navigation";
 import KanbanBoard from "../components/KanbanBoard";
@@ -29,6 +30,18 @@ interface Comment {
   createdAt: string;
 }
 
+export interface ICategory {
+  id: number;
+  name: string;
+  desc: string;
+  user: {
+    name: string;
+    email: string;
+    org: string;
+  };
+  createdAt: string;
+}
+
 interface Idea {
   id: number;
   title: string;
@@ -37,6 +50,7 @@ interface Idea {
     id: number;
     name: string;
     email: string;
+    org: string;
   };
   category: {
     id: number;
@@ -61,7 +75,7 @@ interface Idea {
 
 interface HomeProps {
   initialIdeas: Idea[];
-  categories: Category[];
+  categories: ICategory[];
 }
 
 const Home: NextPage<HomeProps> = ({ initialIdeas, categories }) => {
@@ -332,7 +346,7 @@ const Home: NextPage<HomeProps> = ({ initialIdeas, categories }) => {
       </Head>
 
       <Navigation />
-      
+
       <GoogleTranslate />
       <main className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row gap-6">
@@ -544,7 +558,7 @@ const Home: NextPage<HomeProps> = ({ initialIdeas, categories }) => {
                 </h2>
                 <div className="space-y-6">
                   <div>
-                    {categories.map((category) => (
+                    {categories.map((category: ICategory) => (
                       <div
                         key={category.id}
                         className={`bg-white p-2 mb-2 rounded-lg shadow-sm hover:shadow-md transition-all duration-200 border border-gray-200 cursor-pointer relative`}
@@ -566,7 +580,11 @@ const Home: NextPage<HomeProps> = ({ initialIdeas, categories }) => {
                         <div className="text-xs text-gray-500">
                           <span className="flex items-center">
                             <UserIcon className="h-3 w-3 mr-1" />
-                            {category.owner}
+                            {category.user.name || "no owner"}
+                          </span>
+                          <span className="flex items-center">
+                            <BuildingLibraryIcon className="h-3 w-3 mr-1" />
+                            {category.user.org || "no organization"}
                           </span>
                           <span className="flex items-center">
                             <ClockIcon className="h-3 w-3 mr-1" />
@@ -582,7 +600,6 @@ const Home: NextPage<HomeProps> = ({ initialIdeas, categories }) => {
           </div>
         </div>
       </main>
-      
     </div>
   );
 };
@@ -598,6 +615,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
             id: true,
             name: true,
             email: true,
+            org: true,
           },
         },
         category: {
@@ -620,7 +638,17 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
       },
       orderBy: { createdAt: "desc" },
     }),
-    prisma.category.findMany(),
+    prisma.category.findMany({
+      include: {
+        user: {
+          select: {
+            name: true,
+            email: true,
+            org: true,
+          },
+        },
+      },
+    }),
   ]);
 
   const safeIdeas = ideas.map((idea) => ({
@@ -643,6 +671,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   const safeCategories = categories.map((category) => ({
     ...category,
     createdAt: category.createdAt.toISOString(),
+    user: category.user,
   }));
 
   return {

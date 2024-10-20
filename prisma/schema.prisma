@@ -20,6 +20,8 @@ model User {
   comments  Comment[]
   role      Role      @default(USER)
   createdAt DateTime  @default(now())
+  org       String    @default("")
+  categories Category[]
 }
 
 model Idea {
@@ -62,9 +64,10 @@ model Category {
   id        Int       @id @default(autoincrement())
   name      String    @unique
   desc      String    @default("no description")
-  owner     String    @default("no owner")
+  userId    Int
+  user      User      @relation(fields: [userId], references: [id])
   createdAt DateTime  @default(now())
-  ideas Idea[]
+  ideas     Idea[]
 }
 
 enum Role {

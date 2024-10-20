@@ -3,9 +3,10 @@ import React, { useState } from 'react'
 import { Category } from '@prisma/client'
 import TiptapEditor from './TiptapEditor'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
+import { ICategory } from '../pages'
 
 interface IdeaSubmissionFormProps {
-  categories: Category[]
+  categories: ICategory[]
   onSubmit: (idea: { title: string; description: string; categoryId: number }) => void
   onCancel: () => void
 }
