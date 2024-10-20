@@ -1,5 +1,5 @@
 import React from 'react'
-import { ChartBarIcon, FolderIcon, UserIcon, LightBulbIcon } from '@heroicons/react/24/outline'
+import { ChartBarIcon, CalendarIcon, UserIcon, LightBulbIcon } from '@heroicons/react/24/outline'
 
 interface AdminTabsProps {
   activeTab: 'dashboard' | 'categories' | 'users' | 'ideas'
@@ -9,7 +9,7 @@ interface AdminTabsProps {
 const AdminTabs: React.FC<AdminTabsProps> = ({ activeTab, onTabChange }) => {
   const tabs = [
     { name: 'dashboard', icon: ChartBarIcon, label: 'Dashboard' },
-    { name: 'categories', icon: FolderIcon, label: 'Categories' },
+    { name: 'categories', icon: CalendarIcon, label: 'Events' },
     { name: 'users', icon: UserIcon, label: 'Users' },
     { name: 'ideas', icon: LightBulbIcon, label: 'Ideas' },
   ] as const;

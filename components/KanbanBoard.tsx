@@ -436,7 +436,7 @@ const KanbanBoard: React.FC<KanbanBoardProps> = ({
           className="text-sm text-gray-600 mb-3 line-clamp-2 prose max-w-none"
           dangerouslySetInnerHTML={{ __html: idea.description }}
         />
-        <div className="flex justify-between items-center text-xs text-gray-500 mb-2">
+        <div className="text-xs text-gray-500 mb-2">
           <span className="flex items-center">
             <UserIcon className="h-3 w-3 mr-1" />
             {idea.author.name}
