@@ -102,7 +102,7 @@ const Profile: NextPage<ProfileProps> = ({ user }) => {
   return (
     <div className="min-h-screen bg-gray-100">
       <Head>
-        <title>{user.name ? `${user.name}'s Profile` : 'User Profile'} | Feature Ideas Platform</title>
+        <title>{user.name ? `${user.name}'s Profile` : 'User Profile'} | SGIdeas</title>
         <meta name="description" content={`Profile page of ${user.name || 'user'}`} />
       </Head>
 

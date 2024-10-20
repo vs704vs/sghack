@@ -51,7 +51,7 @@ const Navigation: React.FC = () => {
             <div className="flex-shrink-0">
               <Link href="/" className="flex items-center">
                 <span className="text-2xl font-bold text-stone-900">
-                  Feature Ideas
+                  SGIdeas
                 </span>
               </Link>
             </div>
@@ -142,7 +142,7 @@ const Navigation: React.FC = () => {
                           <div className="px-5 pt-4 flex items-center justify-between">
                             <div>
                               <span className="text-2xl font-bold text-stone-900">
-                                Feature Ideas
+                                SGIdeas
                               </span>
                             </div>
                           </div>

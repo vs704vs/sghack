@@ -82,7 +82,7 @@ const IdeaPage: NextPage<IdeaProps> = ({ idea }) => {
   return (
     <div className="min-h-screen bg-gray-100">
       <Head>
-        <title>{idea.title} | Feature Ideas Platform</title>
+        <title>{idea.title} | SGIdeas</title>
         <meta name="description" content={idea.description} />
       </Head>
 

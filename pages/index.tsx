@@ -340,8 +340,8 @@ const Home: NextPage<HomeProps> = ({ initialIdeas, categories }) => {
   return (
     <div className="min-h-screen bg-gray-100">
       <Head>
-        <title>Feature Ideas Platform</title>
-        <meta name="description" content="Submit and vote on feature ideas" />
+        <title>SGIdeas</title>
+        <meta name="description" content="Submit and vote on SGIdeas" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
