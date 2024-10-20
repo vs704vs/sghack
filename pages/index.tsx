@@ -17,7 +17,6 @@ import {
 } from "@heroicons/react/24/outline";
 import Navigation from "../components/Navigation";
 import KanbanBoard from "../components/KanbanBoard";
-import { formatDate } from "date-fns";
 
 interface Comment {
   id: number;
@@ -553,13 +552,13 @@ const Home: NextPage<HomeProps> = ({ initialIdeas, categories }) => {
                         </h4>
                         <div
                           className="text-xs text-gray-600 mb-4"
-                          style={{ marginTop: "-7%" }}
+                          style={{ marginTop: "-5%" }}
                         >
-                          {categoryDescExpand[category.id] ||
-                          category.desc === "no description" ||
-                          category.desc === ""
+                          {categoryDescExpand[category.id]
                             ? category.desc
-                            : category.desc.slice(0, 60) + "..."}
+                            : category.desc.length > 60
+                            ? category.desc.slice(0, 60) + "..."
+                            : category.desc}
                         </div>
                         <div className="text-xs text-gray-500">
                           <span className="flex items-center">
