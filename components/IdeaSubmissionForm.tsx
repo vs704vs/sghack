@@ -68,7 +68,7 @@ const IdeaSubmissionForm: React.FC<IdeaSubmissionFormProps> = ({ categories, onS
       </div>
       <div>
         <label htmlFor="category" className="block text-sm font-medium text-gray-700 mb-2">
-          Category
+          Event
         </label>
         <div className="relative">
           <select
@@ -78,7 +78,7 @@ const IdeaSubmissionForm: React.FC<IdeaSubmissionFormProps> = ({ categories, onS
             className={`block w-full px-4 py-3 rounded-lg shadow-sm focus:ring-2 focus:ring-stone-900 focus:border-transparent appearance-none transition duration-150 ease-in-out
               ${errors.category ? 'border-red-300 ring-red-300' : 'border-gray-300'}`}
           >
-            <option value="">Select a category</option>
+            <option value="">Select an event</option>
             {categories.map((category) => (
               <option key={category.id} value={category.id}>
                 {category.name}
