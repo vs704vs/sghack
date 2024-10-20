@@ -4,6 +4,7 @@ import { useRouter } from 'next/router'
 import { useSession, signOut } from 'next-auth/react'
 import { Popover, Transition } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon, UserCircleIcon } from '@heroicons/react/24/outline'
+import GoogleTranslate from './GoogleTranslate'
 
 const Navigation: React.FC = () => {
   const { data: session, status } = useSession()
@@ -35,7 +36,10 @@ const Navigation: React.FC = () => {
       <div className="h-16"></div>
       <nav className={`fixed top-0 left-0 right-0 z-10 transition-all duration-300 ${scrolled ? 'bg-white shadow-md' : 'bg-gray-50'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
+          <div className="flex justify-between items-center">
+            <div className="flex-shrink-0">
+              <GoogleTranslate />
+            </div>
             <div className="flex-shrink-0">
               <Link href="/" className="flex items-center">
                 <span className="text-2xl font-bold text-stone-900">Feature Ideas</span>
@@ -44,7 +48,7 @@ const Navigation: React.FC = () => {
             <div className="hidden sm:ml-6 sm:flex sm:items-center">
               {status === 'authenticated' && session ? (
                 <div className="flex items-center space-x-4">
-                  <a 
+                  <a
                     href="#"
                     onClick={handleProfileClick}
                     className="text-gray-700 hover:text-stone-900 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
@@ -52,8 +56,8 @@ const Navigation: React.FC = () => {
                     My Profile
                   </a>
                   {session.user?.role === 'ADMIN' && (
-                    <Link 
-                      href="/admin" 
+                    <Link
+                      href="/admin"
                       className="text-gray-700 hover:text-stone-900 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
                     >
                       Admin
