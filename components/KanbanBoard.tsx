@@ -418,14 +418,14 @@ const KanbanBoard: React.FC<KanbanBoardProps> = ({
     setDraggedIdea(null);
   };
 
-  const formatDate = useCallback((dateString: string) => {
+  const formatDate = (dateString: string) => {
     const date = new Date(dateString);
     return date.toLocaleDateString("de-DE", {
       year: "numeric",
       month: "2-digit",
       day: "2-digit",
     });
-  }, []);
+  };
 
   const columns: Record<ColumnType, Idea[]> = {
     pending: ideas.filter((idea) => idea.status === "pending"),

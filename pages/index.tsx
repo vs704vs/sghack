@@ -328,14 +328,14 @@ const Home: NextPage<HomeProps> = ({ initialIdeas, categories }) => {
     setCategoryDescExpand(tempArr);
   };
 
-  const formatDate = useCallback((dateString: string) => {
+  const formatDate = (dateString: string) => {
     const date = new Date(dateString);
     return date.toLocaleDateString("de-DE", {
       year: "numeric",
       month: "2-digit",
       day: "2-digit",
     });
-  }, []);
+  };
 
   return (
     <div className="min-h-screen bg-gray-100">
