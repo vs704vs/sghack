@@ -1,6 +1,7 @@
 # Feature Ideas Platform
 
 A dynamic web application for submitting, voting on, and managing feature ideas.
+https://sghack.onrender.com/
 
 ## 🚀 Features
 
